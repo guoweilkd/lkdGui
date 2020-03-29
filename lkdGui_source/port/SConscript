@@ -3,6 +3,6 @@ from building import *
 cwd     = GetCurrentDir()
 src     = Glob('*.c') + Glob('*.cpp')
 
-group = DefineGroup('lkdGui', src, depend = ['PKG_USING_LKDGUI'], CPPPATH = CPPPATH)
+group = DefineGroup('lkdGui', src, depend = ['PKG_USING_LKDGUI'])
 
 Return('group')

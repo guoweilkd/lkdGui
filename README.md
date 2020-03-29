@@ -33,8 +33,8 @@ lkdGui package 遵循 GPLv2 许可，详见 `LICENSE` 文件。
 
 ```
 RT-Thread online packages
-    miscellaneous packages --->
-        [*] A hello package
+    peripheral libraries and drivers  --->
+        [*] lkdGui a monochrome graphic lirary.  --->
 ```
 
 然后让 RT-Thread 的包管理器自动更新，或者使用 `pkgs --update` 命令更新包到 BSP 中。
