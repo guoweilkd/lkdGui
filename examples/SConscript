@@ -1,0 +1,21 @@
+Import('rtconfig')
+from building import *
+
+cwd = GetCurrentDir()
+src = []
+
+if GetDepend(['PKG_USING_LKDGUI_SAMPLE']):
+    src += Glob('example_lkdGui.c')
+    src += Glob('../lkdGui_source/port/fontDriver/ASCII_6_12.c')
+    src += Glob('../lkdGui_source/port/fontDriver/GB2312_12_12.c')
+
+CPPPATH = [cwd]
+
+
+if GetDepend('PKG_USING_LKDGUI'):
+    src     = Glob('*.c')
+    CPPPATH = [cwd]
+
+    group = DefineGroup('lkdGuiExample', src, depend = ['PKG_USING_LKDGUI_SAMPLE'], CPPPATH = CPPPATH)
+
+Return('group')

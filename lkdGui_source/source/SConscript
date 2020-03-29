@@ -1,7 +1,8 @@
+Import('rtconfig')
 from building import *
 
 cwd     = GetCurrentDir()
-src     = Glob('*.c') + Glob('*.cpp')
+src     = Glob('*.c')
 CPPPATH = [cwd + '/../include']
 
 group = DefineGroup('lkdGui', src, depend = ['PKG_USING_LKDGUI'], CPPPATH = CPPPATH)

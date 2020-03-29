@@ -56,6 +56,6 @@ void userAppPortRun(void)
 
 
 static void UserMainWinFun(void *param)
- {
+{
      //用户自定义代码。
- }
+}

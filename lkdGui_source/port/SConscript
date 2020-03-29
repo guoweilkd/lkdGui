@@ -2,7 +2,6 @@ from building import *
 
 cwd     = GetCurrentDir()
 src     = Glob('*.c') + Glob('*.cpp')
-CPPPATH = [cwd + '/../include']
 
 group = DefineGroup('lkdGui', src, depend = ['PKG_USING_LKDGUI'], CPPPATH = CPPPATH)
 
